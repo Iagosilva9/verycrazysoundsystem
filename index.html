@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Very Crazy Sound System | Som, Películas e Chaves Automotivas em Embu das Artes</title>
+<meta name="description" content="Very Crazy Sound System — desde 1996 em Embu das Artes/SP. Som automotivo, multimídia, películas solar 3M, PPF, antivandalismo, chaves codificadas e acessórios. Nota 4,8 no Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0c; --bg2:#121214; --card:#18181b; --line:#2a2a2e;
+  --red:#e10600; --red2:#ff2a1f; --txt:#f4f4f5; --mut:#a1a1aa;
+  --carbon:
+    linear-gradient(27deg,#151515 5px,transparent 5px) 0 5px,
+    linear-gradient(207deg,#151515 5px,transparent 5px) 10px 0,
+    linear-gradient(27deg,#222 5px,transparent 5px) 0 10px,
+    linear-gradient(207deg,#222 5px,transparent 5px) 10px 5px,
+    linear-gradient(90deg,#1b1b1b 10px,transparent 10px),
+    linear-gradient(#1d1d1d 25%,#1a1a1a 25%,#1a1a1a 50%,transparent 50%,transparent 75%,#242424 75%,#242424);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.logo{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
+.tag{display:inline-block;color:var(--red2);font-weight:700;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+.tag::before{content:"";display:inline-block;width:28px;height:3px;background:var(--red);vertical-align:middle;margin-right:10px}
+.sec{padding:96px 0}
+.sec h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:16px}
+.sec .lead{color:var(--mut);max-width:640px;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:6px;font-weight:700;font-size:.95rem;transition:.2s;border:2px solid transparent;cursor:pointer}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 30px -10px rgba(225,6,0,.7)}
+.btn-red:hover{background:var(--red2);transform:translateY(-2px)}
+.btn-ghost{border-color:#3f3f46;color:#fff}
+.btn-ghost:hover{border-color:#fff}
+.btn svg{width:20px;height:20px}
+
+/* NAV */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(11,11,12,.92);backdrop-filter:blur(10px);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo small{font-size:.62rem;letter-spacing:.42em;color:var(--mut);font-family:Inter;font-weight:700}
+.logo b{font-size:1.65rem;font-style:italic;font-weight:700;display:flex;align-items:center;gap:8px}
+.logo b span{color:var(--red)}
+.stripes{display:inline-flex;gap:3px}
+.stripes i{display:block;width:5px;height:18px;background:var(--red);transform:skewX(-20deg)}
+.stripes i:nth-child(2){opacity:.75}.stripes i:nth-child(3){opacity:.5}
+nav ul{display:flex;gap:30px;list-style:none;font-weight:600;font-size:.92rem}
+nav ul a{color:#d4d4d8}
+nav ul a:hover{color:var(--red2)}
+.nav .btn{padding:10px 18px}
+.burger{display:none;background:none;border:0;color:#fff;cursor:pointer}
+.burger svg{width:30px;height:30px}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;background:var(--carbon);background-color:#131313;background-size:20px 20px}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse at 75% 40%,rgba(225,6,0,.28),transparent 55%),
+  linear-gradient(90deg,rgba(11,11,12,.97) 30%,rgba(11,11,12,.6) 70%,rgba(11,11,12,.85)),
+  linear-gradient(0deg,var(--bg),transparent 30%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.2rem);margin:6px 0 22px}
+.hero h1 em{font-style:normal;color:var(--red);display:block}
+.hero p{color:#c4c4c9;font-size:1.12rem;max-width:560px;margin-bottom:34px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px}
+.badges{display:flex;flex-wrap:wrap;gap:24px;margin-top:44px;color:var(--mut);font-size:.9rem}
+.badges div{display:flex;align-items:center;gap:10px}
+.badges strong{color:#fff;font-size:1.25rem;font-family:Oswald}
+.stars{color:#fbbf24;letter-spacing:2px}
+
+/* speaker visual */
+.speaker{position:relative;aspect-ratio:1;max-width:440px;margin-left:auto;width:100%}
+.ring{position:absolute;border-radius:50%;inset:0;background:radial-gradient(circle,#2a2a2a 0 30%,#0e0e0e 31% 33%,#1c1c1c 34% 58%,#0a0a0a 59% 61%,#181818 62% 100%);box-shadow:0 0 0 10px #0d0d0d,0 0 0 12px #2b2b2b,0 40px 80px -20px rgba(225,6,0,.45),inset 0 0 60px #000}
+.ring::after{content:"";position:absolute;inset:36%;border-radius:50%;background:radial-gradient(circle at 35% 35%,#555,#111 70%);box-shadow:0 0 30px rgba(0,0,0,.8)}
+.ring.pulse{animation:thump 1.1s infinite}
+@keyframes thump{0%,100%{transform:scale(1)}12%{transform:scale(1.035)}24%{transform:scale(.995)}}
+.wave{position:absolute;inset:-8%;border:2px solid var(--red);border-radius:50%;opacity:0;animation:wave 2.2s infinite}
+.wave:nth-child(2){animation-delay:1.1s}
+@keyframes wave{0%{transform:scale(.85);opacity:.6}100%{transform:scale(1.25);opacity:0}}
+.since{position:absolute;bottom:4%;left:-6%;background:var(--red);padding:14px 20px;border-radius:8px;font-family:Oswald;text-transform:uppercase;line-height:1.05;box-shadow:0 20px 40px -10px rgba(0,0,0,.7)}
+.since b{font-size:2rem;display:block}
+.since span{font-size:.8rem;letter-spacing:.12em}
+
+/* MARQUEE */
+.marquee{background:var(--red);overflow:hidden;white-space:nowrap;padding:14px 0;transform:skewY(-1.2deg);margin-top:-20px;position:relative;z-index:2}
+.marquee div{display:inline-block;animation:mq 30s linear infinite;font-family:Oswald;font-size:1.25rem;text-transform:uppercase;letter-spacing:.06em}
+.marquee span{margin:0 26px}
+.marquee span::after{content:"✦";margin-left:52px;opacity:.6}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* SERVICES */
+.grid{display:grid;gap:22px}
+.services{grid-template-columns:repeat(3,1fr);margin-top:50px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:32px 28px;position:relative;overflow:hidden;transition:.25s}
+.svc::after{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--red);transition:.35s}
+.svc:hover{transform:translateY(-6px);border-color:#3a3a3f}
+.svc:hover::after{width:100%}
+.svc .ic{width:54px;height:54px;border-radius:10px;background:rgba(225,6,0,.12);color:var(--red2);display:grid;place-items:center;margin-bottom:20px}
+.svc .ic svg{width:28px;height:28px}
+.svc h3{font-size:1.35rem;margin-bottom:10px}
+.svc p{color:var(--mut);font-size:.95rem}
+.svc ul{list-style:none;margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.svc li{font-size:.75rem;font-weight:600;padding:5px 10px;border-radius:99px;background:#232327;color:#d4d4d8}
+
+/* STATS */
+.stats{background:var(--bg2);border-block:1px solid var(--line)}
+.stats .grid{grid-template-columns:repeat(4,1fr);padding:56px 0;text-align:center}
+.stat b{font-family:Oswald;font-size:clamp(2.4rem,5vw,3.6rem);color:#fff;display:block;line-height:1}
+.stat b sup{color:var(--red);font-size:.5em}
+.stat span{color:var(--mut);font-size:.9rem;text-transform:uppercase;letter-spacing:.12em}
+
+/* WORKS */
+.works-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{background:transparent;border:1px solid var(--line);color:#d4d4d8;padding:8px 16px;border-radius:99px;font:600 .85rem Inter;cursor:pointer;transition:.2s}
+.filters button.on,.filters button:hover{background:var(--red);border-color:var(--red);color:#fff}
+.works{grid-template-columns:repeat(3,1fr);margin-top:40px}
+.work{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.work:hover{transform:translateY(-4px);border-color:#3f3f46}
+.work .ph{aspect-ratio:4/5;position:relative;background:var(--carbon);background-color:#151515;background-size:20px 20px;display:grid;place-items:center;overflow:hidden}
+.work .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.work .ph .car{font-family:Oswald;font-size:1.7rem;text-transform:uppercase;text-align:center;padding:0 20px;text-shadow:0 4px 20px #000;position:relative}
+.work .ph .car small{display:block;font-size:.8rem;color:var(--red2);letter-spacing:.2em}
+.work .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent 50%)}
+.work .cat{position:absolute;top:14px;left:14px;z-index:2;background:var(--red);font-size:.7rem;font-weight:700;padding:5px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:.08em}
+.work .bd{padding:22px}
+.work h3{font-size:1.15rem;margin-bottom:8px}
+.work p{color:var(--mut);font-size:.9rem}
+.work.hide{display:none}
+
+/* ABOUT */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-vis{position:relative;aspect-ratio:4/5;border-radius:14px;background:var(--carbon);background-color:#151515;background-size:20px 20px;border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
+.about-vis .big{font-family:Oswald;font-size:clamp(6rem,14vw,10rem);line-height:.85;text-align:center;color:transparent;-webkit-text-stroke:2px var(--red)}
+.about-vis .big span{display:block;color:#fff;-webkit-text-stroke:0;font-size:.28em;letter-spacing:.15em}
+.about p{color:#c4c4c9;margin-bottom:16px}
+.checks{list-style:none;margin:26px 0 32px;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:start}
+.checks li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-weight:700;font-size:.8rem}
+
+/* REVIEWS */
+.reviews{background:var(--bg2)}
+.rev-top{display:flex;align-items:center;gap:30px;flex-wrap:wrap;margin-top:30px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px}
+.rev-top .score{font-family:Oswald;font-size:4.2rem;line-height:1}
+.rev-top .stars{font-size:1.5rem}
+.rev-top .gl{display:flex;align-items:center;gap:8px;color:var(--mut)}
+.rev-top .btn{margin-left:auto}
+
+/* CONTACT */
+.contact .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+.info{display:grid;gap:16px;margin-top:34px}
+.info-it{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.info-it .ic{flex:none;width:46px;height:46px;border-radius:10px;background:rgba(225,6,0,.12);color:var(--red2);display:grid;place-items:center}
+.info-it .ic svg{width:22px;height:22px}
+.info-it h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--mut);margin-bottom:4px}
+.info-it a:hover{color:var(--red2)}
+.hours{display:grid;grid-template-columns:auto auto;gap:2px 20px}
+.map{border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:440px;filter:grayscale(.3) contrast(1.05)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block}
+
+/* CTA */
+.cta{background:linear-gradient(110deg,#8f0400,var(--red) 55%,#ff3b2f);text-align:center;padding:80px 0;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:var(--carbon);background-size:20px 20px;opacity:.18}
+.cta .wrap{position:relative}
+.cta h2{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:14px}
+.cta p{font-size:1.1rem;margin-bottom:30px;opacity:.92}
+.cta .btn{background:#fff;color:#111}
+.cta .btn:hover{transform:translateY(-2px)}
+
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mut);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.socials{display:flex;gap:12px}
+.socials a{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.2s}
+.socials a:hover{background:var(--red);border-color:var(--red);color:#fff}
+.socials svg{width:20px;height:20px}
+
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:.2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px;color:#fff}
+
+.reveal{opacity:0;transform:translateY(30px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  nav ul,.nav .btn{display:none}
+  .burger{display:block}
+  nav.open ul{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;gap:0;background:rgba(11,11,12,.98);border-bottom:1px solid var(--line)}
+  nav.open ul a{display:block;padding:16px 20px;border-top:1px solid var(--line)}
+  .hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr}
+  .speaker{max-width:300px;margin:10px auto 0}
+  .services,.works{grid-template-columns:repeat(2,1fr)}
+  .stats .grid{grid-template-columns:repeat(2,1fr);gap:34px}
+  .about-vis{aspect-ratio:16/10}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .sec{padding:70px 0}
+  .services,.works{grid-template-columns:1fr}
+  .hero .ctas .btn{width:100%;justify-content:center}
+  .rev-top .btn{margin-left:0;width:100%;justify-content:center}
+  .since{left:0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Very Crazy Sound System">
+      <small>Sound System</small>
+      <b>Very<span>Crazy</span><span class="stripes"><i></i><i></i><i></i></span></b>
+    </a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#trabalhos">Trabalhos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-red" href="https://wa.me/5511999186461?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Orçamento</a>
+    <button class="burger" aria-label="Abrir menu" onclick="document.getElementById('nav').classList.toggle('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">Embu das Artes · SP</span>
+      <h1>Seu carro do jeito <em>que você sempre quis.</em></h1>
+      <p>Som automotivo, multimídia, películas solar 3M, chaves codificadas e acessórios — instalação profissional com quase 30 anos de estrada.</p>
+      <div class="ctas">
+        <a class="btn btn-red" href="https://wa.me/5511999186461?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.4M12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8M20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 23.8l6.3-1.6A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5"/></svg>
+          Pedir orçamento no WhatsApp</a>
+        <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+      </div>
+      <div class="badges">
+        <div><strong>4,8</strong><span class="stars">★★★★★</span><span>69 avaliações no Google</span></div>
+        <div><strong>+4 mil</strong><span>seguidores no Instagram</span></div>
+      </div>
+    </div>
+    <div class="speaker" aria-hidden="true">
+      <div class="wave"></div><div class="wave"></div>
+      <div class="ring pulse"></div>
+      <div class="since"><span>Desde</span><b>1996</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div>
+  <span>Som automotivo</span><span>Películas 3M</span><span>Chaves codificadas</span><span>Multimídia CarPlay</span><span>PPF</span><span>Antivandalismo</span><span>Módulos de vidro</span><span>Câmeras</span>
+  <span>Som automotivo</span><span>Películas 3M</span><span>Chaves codificadas</span><span>Multimídia CarPlay</span><span>PPF</span><span>Antivandalismo</span><span>Módulos de vidro</span><span>Câmeras</span>
+</div></div>
+
+<section class="sec" id="servicos">
+  <div class="wrap">
+    <span class="tag reveal">O que fazemos</span>
+    <h2 class="reveal">Serviços</h2>
+    <p class="lead reveal">Carros, motos, utilitários e caminhões. Do upgrade simples ao projeto completo, com equipamento de qualidade e acabamento de fábrica.</p>
+    <div class="grid services">
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="14" r="4"/><circle cx="12" cy="6" r="1"/></svg></div>
+        <h3>Som automotivo</h3>
+        <p>Projetos de som do básico ao trio: alto-falantes, amplificadores, subwoofers e caixas amplificadas com instalação limpa.</p>
+        <ul><li>Amplificadores</li><li>Subwoofer</li><li>Triaxiais</li><li>Som trio</li></ul>
+      </article>
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg></div>
+        <h3>Multimídia & câmeras</h3>
+        <p>Centrais multimídia com Apple CarPlay e Android Auto, câmera de ré e câmera frontal. Waze e Google Maps na tela do carro.</p>
+        <ul><li>CarPlay</li><li>Android Auto</li><li>Câmera de ré</li><li>Câmera frontal</li></ul>
+      </article>
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 3v9l6-6"/></svg></div>
+        <h3>Película solar</h3>
+        <p>Aplicação autorizada 3M (Color Stable e NanoCarbon) com corte computadorizado. Conforto térmico, proteção UV e privacidade.</p>
+        <ul><li>3M Color Stable</li><li>NanoCarbon</li><li>G5 · G15 · G20</li></ul>
+      </article>
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Antivandalismo & PPF</h3>
+        <p>Película antivandalismo PS12000 que reforça os vidros contra furtos e PPF para proteger pintura, quinas de porta, maçanetas e soleiras.</p>
+        <ul><li>PS12000</li><li>PPF</li><li>Segurança</li></ul>
+      </article>
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7.5" cy="15.5" r="5.5"/><path d="M21 2l-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></svg></div>
+        <h3>Chaves codificadas</h3>
+        <p>Cópia de chave reserva, chave canivete, smart key (presencial) e programação mesmo com todas as chaves perdidas — carros e motos.</p>
+        <ul><li>Chave canivete</li><li>Smart key</li><li>Chave reserva</li><li>Motos</li></ul>
+      </article>
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14l-1.5-6h-11z"/><path d="M3 17h18v3H3zM7 11l2-5h6l2 5"/></svg></div>
+        <h3>Acessórios & módulos</h3>
+        <p>Módulos de vidro plug &amp; play (sem cortar fios originais), iluminação DRL, ligação de engate, alarmes e travas.</p>
+        <ul><li>Módulo de vidro</li><li>DRL</li><li>Engate</li><li>Alarme</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap grid">
+    <div class="stat reveal"><b data-count="30">0</b><span>Anos de experiência</span></div>
+    <div class="stat reveal"><b><span data-count="4.8" data-dec="1">0</span><sup>★</sup></b><span>Nota no Google</span></div>
+    <div class="stat reveal"><b><span data-count="4100">0</span><sup>+</sup></b><span>Seguidores</span></div>
+    <div class="stat reveal"><b><span data-count="446">0</span><sup>+</sup></b><span>Projetos postados</span></div>
+  </div>
+</section>
+
+<section class="sec" id="trabalhos">
+  <div class="wrap">
+    <div class="works-head">
+      <div>
+        <span class="tag reveal">Portfólio</span>
+        <h2 class="reveal">Trabalhos recentes</h2>
+      </div>
+      <div class="filters reveal">
+        <button class="on" data-f="all">Todos</button>
+        <button data-f="som">Som & multimídia</button>
+        <button data-f="pelicula">Películas</button>
+        <button data-f="chave">Chaves</button>
+        <button data-f="acessorio">Acessórios</button>
+      </div>
+    </div>
+    <!-- Para usar fotos reais: salve as imagens na pasta img/ com os nomes indicados em data-img -->
+    <div class="grid works">
+      <article class="work reveal" data-c="pelicula">
+        <div class="ph" data-img="img/nissan-kicks-2026.jpg"><span class="cat">Películas</span><div class="car"><small>2026</small>Nissan Kicks</div></div>
+        <div class="bd"><h3>Antivandalismo + 3M Color Stable</h3><p>Duas camadas: PS12000 antivandalismo nos vidros laterais e 3M Color Stable G5/G15 com tecnologia NanoCarbon.</p></div>
+      </article>
+      <article class="work reveal" data-c="som">
+        <div class="ph" data-img="img/renault-master-2023.jpg"><span class="cat">Som & multimídia</span><div class="car"><small>2023</small>Renault Master</div></div>
+        <div class="bd"><h3>Utilitário completo</h3><p>Multimídia 10" CarPlay com câmera de ré, triaxiais 6", caixa amplificada 8" 250 W RMS, película G20/G5 e módulo de vidro.</p></div>
+      </article>
+      <article class="work reveal" data-c="pelicula">
+        <div class="ph" data-img="img/mercedes-gla.jpg"><span class="cat">Películas</span><div class="car"><small>Mercedes-Benz</small>GLA 250</div></div>
+        <div class="bd"><h3>NanoCarbon + PPF</h3><p>Película NanoCarbon G5 e G20 no para-brisa, mais PPF nas quinas de porta, conchas das maçanetas e soleiras.</p></div>
+      </article>
+      <article class="work reveal" data-c="som">
+        <div class="ph" data-img="img/corsa-sedan.jpg"><span class="cat">Som & multimídia</span><div class="car"><small>2004</small>Corsa Sedan</div></div>
+        <div class="bd"><h3>Upgrade de som</h3><p>Amplificador 4×125 W Falcon, sub ativo 8" 250 W, médios Bomber e JBL, multimídia 7" CarPlay e chave canivete.</p></div>
+      </article>
+      <article class="work reveal" data-c="chave">
+        <div class="ph" data-img="img/honda-pcx.jpg"><span class="cat">Chaves</span><div class="car"><small>2023</small>Honda PCX</div></div>
+        <div class="bd"><h3>Todas as chaves perdidas</h3><p>Programação de 2 smart keys (chaves presenciais) para a scooter da cliente. Problema resolvido.</p></div>
+      </article>
+      <article class="work reveal" data-c="acessorio">
+        <div class="ph" data-img="img/toyota-hilux.jpg"><span class="cat">Acessórios</span><div class="car"><small>2025</small>Toyota Hilux</div></div>
+        <div class="bd"><h3>Módulo de vidro plug &amp; play</h3><p>Sobe e desce os vidros pelo controle, sem cortar fios originais, com todos os vidros automatizados.</p></div>
+      </article>
+      <article class="work reveal" data-c="pelicula">
+        <div class="ph" data-img="img/ford-bronco.jpg"><span class="cat">Películas</span><div class="car"><small>Ford</small>Bronco</div></div>
+        <div class="bd"><h3>Película G5 + G20</h3><p>Corte computadorizado, películas de alto rendimento com garantia. Privacidade sem perder a visibilidade.</p></div>
+      </article>
+      <article class="work reveal" data-c="chave">
+        <div class="ph" data-img="img/vw-tcross.jpg"><span class="cat">Chaves</span><div class="car"><small>2020</small>VW T-Cross</div></div>
+        <div class="bd"><h3>Cópia de chave canivete</h3><p>O veículo tinha só uma chave. Fizemos a reserva para mais segurança e comodidade do cliente.</p></div>
+      </article>
+      <article class="work reveal" data-c="chave">
+        <div class="ph" data-img="img/honda-adv.jpg"><span class="cat">Chaves</span><div class="car"><small>2024</small>Honda ADV</div></div>
+        <div class="bd"><h3>Chegou de guincho, saiu rodando</h3><p>Chave programada e moto funcionando no mesmo atendimento.</p></div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a class="btn btn-ghost" href="https://www.instagram.com/verycrazysoundsystem/" target="_blank" rel="noopener">Ver mais no Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="sobre" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="about-vis reveal"><div class="big">96<span>Desde 1996</span></div></div>
+    <div>
+      <span class="tag reveal">Nossa história</span>
+      <h2 class="reveal">Quase 30 anos deixando carros mais crazy</h2>
+      <p class="reveal">A Very Crazy Sound System nasceu em 1996 com a paixão por som automotivo e cresceu junto com seus clientes. Hoje somos referência em Embu das Artes em som, películas, chaves codificadas e acessórios para carros, motos, utilitários e caminhões.</p>
+      <p class="reveal">Nossa história já foi contada no PernaCast, e cada projeto que sai daqui leva o mesmo cuidado do primeiro.</p>
+      <ul class="checks reveal">
+        <li>Aplicação autorizada de películas 3M</li>
+        <li>Instalações plug &amp; play, sem cortar a fiação original</li>
+        <li>Atendimento para carros, motos, utilitários e caminhões</li>
+        <li>Equipamentos com garantia e acabamento profissional</li>
+      </ul>
+      <a class="btn btn-red reveal" href="#contato">Venha nos visitar</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec reviews" id="avaliacoes">
+  <div class="wrap">
+    <span class="tag reveal">Quem conhece, recomenda</span>
+    <h2 class="reveal">Avaliações</h2>
+    <div class="rev-top reveal">
+      <div class="score">4,8</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <div class="gl"><svg width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3A12 12 0 1 1 31.9 15l5.7-5.7A20 20 0 1 0 44 24c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8A12 12 0 0 1 31.9 15l5.7-5.7A20 20 0 0 0 6.3 14.7z"/><path fill="#4CAF50" d="M24 44a20 20 0 0 0 13.4-5.2l-6.2-5.2A12 12 0 0 1 12.7 28l-6.5 5A20 20 0 0 0 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg>69 avaliações no Google</div>
+      </div>
+      <a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&query=Very+Crazy+Sound+System+Embu+das+Artes" target="_blank" rel="noopener">Ver avaliações no Google</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contato">
+  <div class="wrap">
+    <div>
+      <span class="tag reveal">Fale com a gente</span>
+      <h2 class="reveal">Contato & localização</h2>
+      <div class="info">
+        <div class="info-it reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div><h4>Endereço</h4><a href="https://www.google.com/maps/dir/?api=1&destination=Very+Crazy+Sound+System+Rua+Copenhaghen+77+Embu+das+Artes" target="_blank" rel="noopener">Rua Copenhaghen, 77 — Embu das Artes/SP<br>CEP 06810-320</a></div></div>
+        <div class="info-it reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+          <div><h4>Telefones</h4><a href="https://wa.me/5511999186461" target="_blank" rel="noopener">(11) 99918-6461 · WhatsApp</a><br><a href="tel:+551147825762">(11) 4782-5762</a></div></div>
+        <div class="info-it reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><h4>Horários</h4><div class="hours"><span>Seg a Sex</span><span>9h às 18h</span><span>Sábado</span><span>8h às 14h</span></div></div></div>
+      </div>
+    </div>
+    <div class="map reveal">
+      <iframe title="Mapa Very Crazy Sound System" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Very%20Crazy%20Sound%20System%2C%20Rua%20Copenhaghen%2077%2C%20Embu%20das%20Artes&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Bora deixar seu carro crazy?</h2>
+    <p>Chama no WhatsApp e receba seu orçamento sem compromisso.</p>
+    <a class="btn" href="https://wa.me/5511999186461?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="#" class="logo"><small>Sound System</small><b>Very<span>Crazy</span><span class="stripes"><i></i><i></i><i></i></span></b></a>
+    <span>© <span id="yr"></span> Very Crazy Sound System · Desde 1996 · Embu das Artes/SP</span>
+    <div class="socials">
+      <a href="https://www.instagram.com/verycrazysoundsystem/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a href="https://wa.me/5511999186461" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.4M12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8M20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 23.8l6.3-1.6A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5"/></svg></a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Very+Crazy+Sound+System+Embu+das+Artes" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5511999186461?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.4M12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8M20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 23.8l6.3-1.6A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5"/></svg>
+</a>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// header on scroll
+const hd = document.getElementById('top');
+addEventListener('scroll', () => hd.classList.toggle('scrolled', scrollY > 30), {passive:true});
+document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () => document.getElementById('nav').classList.remove('open')));
+
+// real photos when available in img/
+document.querySelectorAll('.ph[data-img]').forEach(ph => {
+  const img = new Image();
+  img.alt = ph.querySelector('.car').textContent.trim();
+  img.onload = () => { ph.prepend(img); ph.querySelector('.car').style.display = 'none'; };
+  img.src = ph.dataset.img;
+});
+
+// filters
+document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.filters button').forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+  document.querySelectorAll('.work').forEach(w => w.classList.toggle('hide', b.dataset.f !== 'all' && w.dataset.c !== b.dataset.f));
+}));
+
+// reveal + counters
+const count = el => {
+  const end = parseFloat(el.dataset.count), dec = +el.dataset.dec || 0, t0 = performance.now();
+  const step = t => { const p = Math.min((t - t0) / 1400, 1), v = end * (1 - Math.pow(1 - p, 3));
+    el.textContent = v.toLocaleString('pt-BR', {minimumFractionDigits:dec, maximumFractionDigits:dec});
+    if (p < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+};
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in');
+  e.target.querySelectorAll('[data-count]').forEach(count);
+  io.unobserve(e.target);
+}), {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
