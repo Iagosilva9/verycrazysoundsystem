@@ -195,6 +195,12 @@ h1.tag{font-family:Inter,system-ui,sans-serif;line-height:1.4}
 .work p{color:var(--mut);font-size:.9rem}
 .work.hide{display:none}
 
+/* REELS */
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.reel{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.reel iframe{width:100%;height:640px;border:0;display:block;background:var(--card)}
+@media (max-width:960px){.reels{grid-template-columns:1fr;max-width:420px;margin-inline:auto}}
+
 /* ABOUT */
 .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .about-vis{position:relative;aspect-ratio:4/5;border-radius:14px;background:var(--carbon);background-color:#151515;background-size:20px 20px;border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
@@ -291,6 +297,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
       <ul>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#trabalhos">Trabalhos</a></li>
+        <li><a href="#videos">Vídeos</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#avaliacoes">Avaliações</a></li>
         <li><a href="#duvidas">Dúvidas</a></li>
@@ -445,6 +452,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     </div>
     <div style="text-align:center;margin-top:44px" class="reveal">
       <a class="btn btn-ghost" href="https://www.instagram.com/verycrazysoundsystem/" target="_blank" rel="noopener">Ver mais no Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="videos">
+  <div class="wrap">
+    <span class="tag reveal">Vídeos</span>
+    <h2 class="reveal">Veja o trabalho de perto</h2>
+    <p class="lead reveal">Reels do nosso Instagram <a href="https://www.instagram.com/verycrazysoundsystem/" target="_blank" rel="noopener" style="color:var(--red2);font-weight:600">@verycrazysoundsystem</a>.</p>
+    <div class="reels">
+      <div class="reel reveal"><iframe title="Honda PCX 2023: programação de smart keys" loading="lazy" src="https://www.instagram.com/reel/DdHAPdqx4Ps/embed" allowfullscreen scrolling="no"></iframe></div>
+      <div class="reel reveal"><iframe title="Renault Master 2023: multimídia, som e película" loading="lazy" src="https://www.instagram.com/reel/DdG47w7RJiJ/embed" allowfullscreen scrolling="no"></iframe></div>
+      <div class="reel reveal"><iframe title="Chevrolet Onix 2019: cópia de chave canivete" loading="lazy" src="https://www.instagram.com/reel/DdF8X-1A56q/embed" allowfullscreen scrolling="no"></iframe></div>
     </div>
   </div>
 </section>
