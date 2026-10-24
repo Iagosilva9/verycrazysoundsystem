@@ -462,9 +462,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     <h2 class="reveal">Veja o trabalho de perto</h2>
     <p class="lead reveal">Reels do nosso Instagram <a href="https://www.instagram.com/verycrazysoundsystem/" target="_blank" rel="noopener" style="color:var(--red2);font-weight:600">@verycrazysoundsystem</a>.</p>
     <div class="reels">
-      <div class="reel reveal"><iframe title="Honda PCX 2023: programação de smart keys" loading="lazy" src="https://www.instagram.com/reel/DdHAPdqx4Ps/embed" allowfullscreen scrolling="no"></iframe></div>
-      <div class="reel reveal"><iframe title="Renault Master 2023: multimídia, som e película" loading="lazy" src="https://www.instagram.com/reel/DdG47w7RJiJ/embed" allowfullscreen scrolling="no"></iframe></div>
-      <div class="reel reveal"><iframe title="Chevrolet Onix 2019: cópia de chave canivete" loading="lazy" src="https://www.instagram.com/reel/DdF8X-1A56q/embed" allowfullscreen scrolling="no"></iframe></div>
+      <div class="reel reveal"><iframe title="Honda PCX 2023: programação de smart keys" data-src="https://www.instagram.com/reel/DdHAPdqx4Ps/embed" allowfullscreen scrolling="no"></iframe></div>
+      <div class="reel reveal"><iframe title="Renault Master 2023: multimídia, som e película" data-src="https://www.instagram.com/reel/DdG47w7RJiJ/embed" allowfullscreen scrolling="no"></iframe></div>
+      <div class="reel reveal"><iframe title="Chevrolet Onix 2019: cópia de chave canivete" data-src="https://www.instagram.com/reel/DdF8X-1A56q/embed" allowfullscreen scrolling="no"></iframe></div>
     </div>
   </div>
 </section>
@@ -595,6 +595,15 @@ const io = new IntersectionObserver(es => es.forEach(e => {
   io.unobserve(e.target);
 }), {threshold:.15});
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// reels do Instagram: carrega quando a seção se aproxima da tela
+const ioReels = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.querySelectorAll('iframe[data-src]').forEach(f => { f.src = f.dataset.src; f.removeAttribute('data-src'); });
+  ioReels.disconnect();
+}), {rootMargin: '600px 0px'});
+const secReels = document.querySelector('.reels');
+if (secReels) ioReels.observe(secReels);
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7575ad85cef04e5e9e684d9bafff68e2"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
